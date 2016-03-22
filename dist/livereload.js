@@ -4,7 +4,7 @@
 
   _ref = require('./protocol'), Parser = _ref.Parser, PROTOCOL_6 = _ref.PROTOCOL_6, PROTOCOL_7 = _ref.PROTOCOL_7;
 
-  Version = '2.2.2';
+  Version = '2.2.3';
 
   exports.Connector = Connector = (function() {
     function Connector(options, WebSocket, Timer, handlers) {
