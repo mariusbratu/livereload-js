@@ -516,8 +516,9 @@
   Options.extract = function(document) {
     var element, keyAndValue, m, mm, options, pair, src, _i, _j, _len, _len1, _ref, _ref1;
     _ref = document.getElementsByTagName('script');
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      element = _ref[_i];
+    element = _ref[_ref.length-1];
+    //for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      //element = _ref[_i];
       if ((src = element.src) && (m = src.match(/^[^:]+:\/\/(.*)\/z?livereload\.js(?:\?(.*))?$/))) {
         options = new Options();
         options.https = src.indexOf("https") === 0;
@@ -538,7 +539,7 @@
         }
         return options;
       }
-    }
+    //}
     return null;
   };
 
